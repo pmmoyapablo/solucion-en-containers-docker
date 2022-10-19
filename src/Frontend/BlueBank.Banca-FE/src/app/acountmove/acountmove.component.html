@@ -1,0 +1,14 @@
+<h1>Mover Cuenta Ahorro</h1>
+
+<br>
+<br>
+<form #formularioCuenta="ngForm" (ngSubmit)="formularioEnviado()">
+  <input type="text" name="code" placeholder="Numero de Cuenta" [(ngModel)]="acountModel.code">
+  <br><br>
+  <input type="number" name="amount" placeholder="Monto a Mover" [(ngModel)]="acountModel.amount">
+  <br><br>
+  <button type="submit">Tranzar</button>
+</form>
+
+<h2>Depurando cuenta:</h2>
+{{ acountModel | json }}

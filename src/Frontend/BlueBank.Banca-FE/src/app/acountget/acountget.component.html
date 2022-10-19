@@ -1,0 +1,16 @@
+<h1>Consultar Cuenta Ahorro</h1>
+
+<br>
+<br>
+<form #formularioCuenta="ngForm" (ngSubmit)="formularioEnviado()">
+  <input type="text" name="code" placeholder="Numero de Cuenta" [(ngModel)]="acountModel.code">
+  <br><br>
+  <button type="submit">Consultar</button>
+</form>
+
+<h2>Depurando cuenta:</h2>
+{{ acountModel | json }}
+
+<h2>Resultado:</h2>
+<p>{{ _result.data.code }}</p>
+<p>{{ _result.data.amount }}</p>

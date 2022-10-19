@@ -1,0 +1,43 @@
+version: '3.4'
+
+services:
+
+  #sqldata:
+    #container_name: sqldata
+    #image: pm44019/sqldatabluebank:v1
+    #build:
+      #context: .
+      #dockerfile: src/Database/Dockerfile
+
+  bluebank.banca.services.webapi:
+    container_name: bluebankbancaserviceswebapi
+    image: pm44019/bluebankbancaserviceswebapi:v4
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      #- DB_CONNECTION_STRING=Server=sqldata;Database=BlueBank;User=sa;Password=Pass@word;
+      - DB_CONNECTION_STRING=Server=devopstester.database.windows.net;Database=BlueBank;User=devopstesteruser;Password=xqenjLInMw1OZxD;
+    build:
+      context: .
+      dockerfile: src/Backend/Bluebank.Banco.WebApi/Dockerfile
+    #depends_on:
+      #- sqldata
+  
+  #bluebank.banca.services.webapi.test:
+    #container_name: bluebankbancaserviceswebapitest
+    #image: ${DOCKER_REGISTRY-}bluebankbancaserviceswebapitest
+    #environment:
+      #- ASPNETCORE_ENVIRONMENT=Development
+    #build:
+      #context: .
+      #dockerfile: src/Backend/Bluebank.Banco.WebApi/Dockerfile
+      #target: test
+    #volumes: 
+      #- ${BUILD_ARTIFACTSTAGINGDIRECTORY:-./test/tests-results/}:/tests 
+
+  bluebank.banca-fe:
+    container_name: bluebankbancafe
+    image: pm44019/bluebankbancafe:v5
+    build:
+      context: .
+      dockerfile: src/Frontend/BlueBank.Banca-FE/Dockerfile
+    restart: always

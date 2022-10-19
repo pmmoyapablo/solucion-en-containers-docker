@@ -1,0 +1,1 @@
+/opt/mssql-tools/bin/sqlcmd -S tcp:127.0.0.1,5433 -U sa -P Pass@word -d master -i BlueBank.sql

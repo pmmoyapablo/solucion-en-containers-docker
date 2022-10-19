@@ -1,0 +1,16 @@
+<h1>Crear Cuenta Ahorro</h1>
+
+<br>
+<br>
+<form #formularioCuenta="ngForm" (ngSubmit)="formularioEnviado()">
+	<input type="text" name="code" placeholder="Numero de Cuenta" [(ngModel)]="acountModel.code">
+	<br><br>
+	<input type="text" name="customerID" placeholder="Cedula Cliente" [(ngModel)]="acountModel.customerID">
+	<br><br>
+	<input type="number" name="amount" placeholder="Monto Inicial" [(ngModel)]="acountModel.amount">
+	<br><br>
+	<button type="submit">Guardar</button>
+</form>
+
+<h2>Depurando cuenta:</h2>
+{{ acountModel | json }}

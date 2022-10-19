@@ -1,0 +1,106 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31912.275
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dominio", "Dominio", "{861B45BE-0052-45D1-B03B-14E09BF91490}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Servicio", "Servicio", "{BC25B48D-D007-4E45-A516-7D31D5F6426A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Aplicacion", "Aplicacion", "{F75C2283-F775-4A43-A7AD-BEB1BA425D9C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infraestructura", "Infraestructura", "{E1D5F0E7-9983-43F7-A1C7-B99B67FE9191}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pruebas Unitarias", "Pruebas Unitarias", "{D152CD3B-0C2E-4ABA-940A-2F1EC952016E}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{742EAF7E-68FB-42C7-91ED-E3C159C57CA2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Portal", "Portal", "{2CE49168-039F-4BAB-840E-14ADEE916B33}"
+	ProjectSection(SolutionItems) = preProject
+		src\Frontend\BlueBank.Banca-FE\Dockerfile = src\Frontend\BlueBank.Banca-FE\Dockerfile
+		src\Frontend\BlueBank.Banca-FE\nginx.conf = src\Frontend\BlueBank.Banca-FE\nginx.conf
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{181BE070-8A41-4217-B0F9-A575D3F34DBB}"
+	ProjectSection(SolutionItems) = preProject
+		src\Database\BlueBank.sql = src\Database\BlueBank.sql
+		src\Database\Dockerfile = src\Database\Dockerfile
+		src\Database\entrypoint.sh = src\Database\entrypoint.sh
+		src\Database\start.sh = src\Database\start.sh
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BootStrap", "BootStrap", "{601C84D9-F246-4866-A124-7AAE1D4B2034}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bluebank.Banco.Aplicacion", "src\Backend\Bluebank.Banco.Aplicacion\Bluebank.Banco.Aplicacion.csproj", "{DF0B0DC1-AB06-455F-81E1-38E1122C3CE2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bluebank.Banco.Dominio", "src\Backend\Bluebank.Banco.Dominio\Bluebank.Banco.Dominio.csproj", "{A955D193-896D-4A09-A40E-67D49D11A469}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bluebank.Banco.Infraestructure.Data", "src\Backend\Bluebank.Banco.Infraestructure.Data\Bluebank.Banco.Infraestructure.Data.csproj", "{C66467CA-3985-4246-8195-664EFE72EF7C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bluebank.Banco.Infraestructure.Logging", "src\Backend\Bluebank.Banco.Infraestructure.Logging\Bluebank.Banco.Infraestructure.Logging.csproj", "{CC9E3A00-78C0-48B6-B81D-EE6A5EC127B3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlueBank.Banca.Pruebas", "test\BlueBank.Banca.Pruebas\BlueBank.Banca.Pruebas.csproj", "{0753569A-8132-42F0-BF5D-FD7B91424D63}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bluebank.Banco.WebApi", "src\Backend\Bluebank.Banco.WebApi\Bluebank.Banco.WebApi.csproj", "{978515B9-177F-4033-A355-5569724DAF78}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bluebank.Banco.Bootstrap", "src\Backend\Bluebank.Banco.Bootstrap\Bluebank.Banco.Bootstrap.csproj", "{871FA250-8F38-4778-87CF-B3FF53E7FE8E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{742EAF7E-68FB-42C7-91ED-E3C159C57CA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{742EAF7E-68FB-42C7-91ED-E3C159C57CA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{742EAF7E-68FB-42C7-91ED-E3C159C57CA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{742EAF7E-68FB-42C7-91ED-E3C159C57CA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF0B0DC1-AB06-455F-81E1-38E1122C3CE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF0B0DC1-AB06-455F-81E1-38E1122C3CE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF0B0DC1-AB06-455F-81E1-38E1122C3CE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF0B0DC1-AB06-455F-81E1-38E1122C3CE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A955D193-896D-4A09-A40E-67D49D11A469}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A955D193-896D-4A09-A40E-67D49D11A469}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A955D193-896D-4A09-A40E-67D49D11A469}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A955D193-896D-4A09-A40E-67D49D11A469}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C66467CA-3985-4246-8195-664EFE72EF7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C66467CA-3985-4246-8195-664EFE72EF7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C66467CA-3985-4246-8195-664EFE72EF7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C66467CA-3985-4246-8195-664EFE72EF7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC9E3A00-78C0-48B6-B81D-EE6A5EC127B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC9E3A00-78C0-48B6-B81D-EE6A5EC127B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC9E3A00-78C0-48B6-B81D-EE6A5EC127B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC9E3A00-78C0-48B6-B81D-EE6A5EC127B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0753569A-8132-42F0-BF5D-FD7B91424D63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0753569A-8132-42F0-BF5D-FD7B91424D63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0753569A-8132-42F0-BF5D-FD7B91424D63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0753569A-8132-42F0-BF5D-FD7B91424D63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{978515B9-177F-4033-A355-5569724DAF78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{978515B9-177F-4033-A355-5569724DAF78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{978515B9-177F-4033-A355-5569724DAF78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{978515B9-177F-4033-A355-5569724DAF78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{871FA250-8F38-4778-87CF-B3FF53E7FE8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{871FA250-8F38-4778-87CF-B3FF53E7FE8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{871FA250-8F38-4778-87CF-B3FF53E7FE8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{871FA250-8F38-4778-87CF-B3FF53E7FE8E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{861B45BE-0052-45D1-B03B-14E09BF91490} = {BC25B48D-D007-4E45-A516-7D31D5F6426A}
+		{F75C2283-F775-4A43-A7AD-BEB1BA425D9C} = {BC25B48D-D007-4E45-A516-7D31D5F6426A}
+		{E1D5F0E7-9983-43F7-A1C7-B99B67FE9191} = {BC25B48D-D007-4E45-A516-7D31D5F6426A}
+		{601C84D9-F246-4866-A124-7AAE1D4B2034} = {BC25B48D-D007-4E45-A516-7D31D5F6426A}
+		{DF0B0DC1-AB06-455F-81E1-38E1122C3CE2} = {F75C2283-F775-4A43-A7AD-BEB1BA425D9C}
+		{A955D193-896D-4A09-A40E-67D49D11A469} = {861B45BE-0052-45D1-B03B-14E09BF91490}
+		{C66467CA-3985-4246-8195-664EFE72EF7C} = {E1D5F0E7-9983-43F7-A1C7-B99B67FE9191}
+		{CC9E3A00-78C0-48B6-B81D-EE6A5EC127B3} = {E1D5F0E7-9983-43F7-A1C7-B99B67FE9191}
+		{0753569A-8132-42F0-BF5D-FD7B91424D63} = {D152CD3B-0C2E-4ABA-940A-2F1EC952016E}
+		{978515B9-177F-4033-A355-5569724DAF78} = {BC25B48D-D007-4E45-A516-7D31D5F6426A}
+		{871FA250-8F38-4778-87CF-B3FF53E7FE8E} = {601C84D9-F246-4866-A124-7AAE1D4B2034}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E8E1DA0B-3BBB-4A65-B5C0-0A8E2895E38C}
+	EndGlobalSection
+EndGlobal

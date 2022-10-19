@@ -1,0 +1,1 @@
+{"ast":null,"code":"export class Acount {\n  constructor(code, customerID, amount) {\n    this.code = code;\n    this.customerID = customerID;\n    this.amount = amount;\n  }\n\n}","map":null,"metadata":{},"sourceType":"module"}

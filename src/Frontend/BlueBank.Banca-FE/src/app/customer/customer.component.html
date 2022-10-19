@@ -1,0 +1,24 @@
+<h1>Clientes BlueBank</h1>
+
+<p>Relacion de Clientes del Banco BlueBank</p>
+
+<p *ngIf="!forecasts.data"><em>Loading...</em></p>
+
+<table class='table table-striped' *ngIf="forecasts.data">
+  <thead>
+    <tr>
+      <th>Cedula ID</th>
+      <th>Nombre</th>
+      <th>Ciudad</th>
+      <th>Telefono</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let forecast of forecasts.data">
+      <td>{{ forecast.customerId }}</td>
+      <td>{{ forecast.contactName }}</td>
+      <td>{{ forecast.city }}</td>
+      <td>{{ forecast.phone }}</td>
+    </tr>
+  </tbody>
+</table>

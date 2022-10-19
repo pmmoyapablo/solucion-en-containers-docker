@@ -1,0 +1,49 @@
+version: '3.4'
+
+services:
+
+  bluebank.banca.services.webapi:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - 5000:80
+    networks:
+      - my-network
+  
+  bluebank.banca-fe:
+    environment:
+      - WS_ROOT_URL=http://localhost:5000/
+    ports:
+      - 4200:81
+    networks:
+      - my-network
+
+  #bluebank.banca.services.webapi.test:
+    #ports:
+      #- "80"
+    #entrypoint:
+      #- dotnet
+      #- test
+      #- --logger
+      #- trx;LogFileName=/tests/test-results.xml
+
+  #sqldata:
+    #restart: always
+    #environment:
+      #- SA_PASSWORD=Pass@word
+      #- ACCEPT_EULA=Y
+    #ports:
+      #- "5433:1433"
+    #volumes:
+      #- bluebank-sqldata:/var/opt/mssql
+      #- ./src/Database/templatedata:/var/opt/mssql/data
+    #networks:
+      #- my-network
+
+#volumes:
+  #bluebank-sqldata:
+    #external: false
+
+networks:
+  my-network:
+    driver: bridge
